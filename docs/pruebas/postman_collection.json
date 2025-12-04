@@ -1,0 +1,64 @@
+{
+    "info": {
+        "_postman_id": "b5a7b8c9-1234-5678-9abc-def012345678",
+        "name": "Proyecto GPU ML",
+        "description": "Colección de pruebas para la API de Predicción de GPUs",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "1. Health Check (Estado de API)",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://127.0.0.1:8000/",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        ""
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "2. Predecir Rendimiento (POST)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"price\": 499.99,\r\n    \"TDP\": 220.0,\r\n    \"G2Dmark\": 850.0\r\n}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/predict",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "predict"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}

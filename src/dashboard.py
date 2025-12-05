@@ -64,9 +64,9 @@ with col2:
             
             if response.status_code == 200:
                 result = response.json()
-                # CLAVES (Coinciden con API/app.py)
-                prediction = result['prediction_G3Dmark']
-                level = result['performance_level']
+                # CLAVES TRADUCIDAS A ESPAÑOL
+                prediction = result['prediccion_G3Dmark']
+                level = result['nivel_rendimiento']
                 
                 # MOSTRAR MÉTRICAS GRANDES
                 st.metric(label="Puntaje G3Dmark Predicho", value=f"{prediction} pts")

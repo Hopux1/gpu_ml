@@ -83,10 +83,10 @@ def predict_performance(data: GPUInput):
 
         # C. RESPUESTA
         return {
-            "status": "success",
-            "gpu_specs": data.dict(),
-            "prediction_G3Dmark": round(prediction, 0),
-            "performance_level": level
+            "estado": "exitoso",
+            "especificaciones_gpu": data.dict(),
+            "prediccion_G3Dmark": round(prediction, 0),
+            "nivel_rendimiento": level
         }
 
     except Exception as e:

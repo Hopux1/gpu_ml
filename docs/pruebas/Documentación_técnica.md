@@ -53,7 +53,7 @@ El modelo fue evaluado utilizando un conjunto de prueba (20% de los datos):
 *   **MAE (Mean Absolute Error):** ~1200 puntos (Error promedio absoluto en la predicción).
 
 **(Espacio para Imagen: Gráfico de Predicción vs Realidad o Importancia de Variables)**
-> *Inserte aquí captura de la matriz de confusión o gráfico de importancia de features.*
+![alt text](<capturas/Captura de pantalla 2025-11-28 010710.png>)
 
 ---
 
@@ -65,13 +65,13 @@ Se ejecutaron pruebas automatizadas para validar la lógica interna:
 *   `test_api.py`: Verifica los códigos de respuesta HTTP (200, 422).
 
 **(Espacio para Imagen: Captura de terminal ejecutando pytest con resultados en verde)**
-> *Inserte aquí captura de pantalla de la terminal.*
+![alt text](capturas/image.png)
 
 ### 5.2. Pruebas de Integración (Postman)
 Se validaron los endpoints de la API manualmente.
 
 **(Espacio para Imagen: Captura de Postman con la petición POST y la respuesta JSON)**
-> *Inserte aquí captura de Postman.*
+![alt text](capturas/POSTMAN.png)
 
 ---
 
@@ -81,10 +81,10 @@ Se validaron los endpoints de la API manualmente.
 La documentación automática generada por FastAPI.
 
 **(Espacio para Imagen: Captura de http://localhost:8000/docs)**
-> *Inserte aquí captura de Swagger UI.*
+![alt text](<capturas/image copy 2.png>)
 
 ### 6.2. Dashboard (Streamlit)
 La interfaz final donde el usuario realiza las predicciones.
 
 **(Espacio para Imagen: Captura del Dashboard con una predicción realizada)**
-> *Inserte aquí captura del Dashboard mostrando el resultado y la clasificación.*
+![alt text](<capturas/image copy 3.png>)*

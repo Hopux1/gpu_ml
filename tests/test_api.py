@@ -23,11 +23,13 @@ def test_predict_valid_gpu():
     # Verificaciones (Assertions)
     assert response.status_code == 200
     data = response.json()
-    assert "prediction_G3Dmark" in data
-    assert "performance_level" in data
-    assert data["status"] == "success"
+    
+    # AHORA EN ESPAÑOL
+    assert "prediccion_G3Dmark" in data
+    assert "nivel_rendimiento" in data
+    assert data["estado"] == "exitoso"
     # La predicción debe ser un número positivo
-    assert data["prediction_G3Dmark"] > 0
+    assert data["prediccion_G3Dmark"] > 0
 
 def test_predict_invalid_data():
     """Prueba 3: Verificar validación de tipos de datos"""

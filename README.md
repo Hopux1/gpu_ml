@@ -24,12 +24,13 @@ Hemos desarrollado un sistema predictivo basado en **Random Forest Regressor**.
 ## 3. Estructura del Proyecto
 ```
 proyecto_gpu_ml/
+├── API/                # API FastAPI
 ├── data/               # Datasets (raw y processed)
 ├── docs/               # Documentación y evidencias
+├── logs/               # registro de entrenamiento
 ├── models/             # Modelos serializados (.pkl)
 ├── notebooks/          # Jupyter Notebooks (EDA y Entrenamiento)
 ├── src/                # Código fuente
-│   ├── app.py          # API FastAPI
 │   ├── dashboard.py    # Interfaz Streamlit
 │   └── train.py        # Script de entrenamiento
 ├── tests/              # Tests unitarios

@@ -27,10 +27,12 @@ with col1:
     
     # FORMULARIO DE ENTRADA
     with st.form("prediction_form"):
-        st.caption("📝 Nota: Ahora puedes escribir texto para probar la validación.")
-        price_input = st.text_input("Precio de Mercado (USD)", value="499.0", help="Ejemplo: 499.99")
-        tdp_input = st.text_input("Consumo (TDP Watts)", value="200.0", help="Ejemplo: 150")
-        g2d_input = st.text_input("Puntaje 2D (G2Dmark)", value="800.0", help="Ejemplo: 850")
+        st.caption("📝 Nota: Los campos ahora solo aceptan números.")
+        price_input = st.number_input("Precio de Mercado (USD)", value=499.0, min_value=0.0, step=10.0, format="%.2f", help="Ejemplo: 499.99")
+        tdp_input = st.number_input("Consumo (TDP Watts)", value=200.0, min_value=0.0, step=5.0, format="%.1f", help="Ejemplo: 150")
+        g2d_input = st.number_input("Puntaje 2D (G2Dmark)", value=800.0, min_value=0.0, step=10.0, format="%.1f", help="Ejemplo: 850")
+        
+        st.warning("⚠️ Solo se pueden colocar números.")
         
         submitted = st.form_submit_button("Calcular Rendimiento")
 
@@ -39,17 +41,14 @@ with col2:
     
     if submitted:
         # VALIDACIÓN MANUAL (Requisito: Demostrar validación de datos)
-        if not price_input or not tdp_input or not g2d_input:
-            st.error("❌ Error de Validación: Todos los campos son obligatorios. No puedes dejarlos vacíos.")
-            st.stop()
+        # st.number_input ya garantiza números, pero validamos que no sean cero si es crítico
+        if price_input <= 0 or tdp_input <= 0:
+             st.warning("⚠️ Advertencia: El precio y el consumo suelen ser mayores a 0.")
 
-        try:
-            price = float(price_input)
-            tdp = float(tdp_input)
-            g2d = float(g2d_input)
-        except ValueError:
-            st.error("❌ Error de Validación: Por favor ingresa solo valores numéricos válidos.")
-            st.stop()
+        # Asignación directa (ya son floats)
+        price = price_input
+        tdp = tdp_input
+        g2d = g2d_input
 
         # CONEXIÓN CON LA API
         api_url = "http://127.0.0.1:8000/predict"
@@ -65,6 +64,7 @@ with col2:
             
             if response.status_code == 200:
                 result = response.json()
+                # CLAVES (Coinciden con API/app.py)
                 prediction = result['prediction_G3Dmark']
                 level = result['performance_level']
                 

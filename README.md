@@ -71,6 +71,11 @@ proyecto_gpu_ml/
     streamlit run src/dashboard.py
     ```
 
+### Video Manual de Usuario
+Aquí puedes ver un video demostrativo del funcionamiento básico de la aplicación:
+
+[![Ver Video](https://img.youtube.com/vi/j0aZOetCKOw/0.jpg)](https://www.youtube.com/watch?v=j0aZOetCKOw)
+
 ## 5. Tecnologías Utilizadas
 *   **Python**: Lenguaje principal.
 *   **Pandas/Numpy**: Manipulación de datos.

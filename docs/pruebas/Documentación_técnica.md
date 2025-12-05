@@ -23,8 +23,8 @@ Se utilizó un dataset de GPUs con las siguientes características principales:
 *   **Correlación Precio-Rendimiento:** Se observó una correlación positiva fuerte entre el precio y el puntaje G3Dmark, aunque con rendimientos decrecientes en la gama ultra alta.
 *   **Impacto del TDP:** El consumo energético (TDP) demostró ser un predictor fiable de la potencia bruta de la tarjeta.
 
-**(Espacio para Imagen: Gráfico de dispersión Precio vs G3Dmark)**
-> *Inserte aquí el gráfico generado en el notebook o dashboard.*
+**(Gráfico de dispersión Precio vs G3Dmark)**
+![alt text](<capturas/image copy.png>)
 
 ---
 
@@ -52,7 +52,7 @@ El modelo fue evaluado utilizando un conjunto de prueba (20% de los datos):
 *   **R2 Score:** ~0.93 (El modelo explica el 93% de la varianza en el rendimiento).
 *   **MAE (Mean Absolute Error):** ~1200 puntos (Error promedio absoluto en la predicción).
 
-**(Espacio para Imagen: Gráfico de Predicción vs Realidad o Importancia de Variables)**
+**(Gráfico de Predicción vs Realidad o Importancia de Variables)**
 ![alt text](<capturas/Captura de pantalla 2025-11-28 010710.png>)
 
 ---
@@ -64,13 +64,13 @@ Se ejecutaron pruebas automatizadas para validar la lógica interna:
 *   `test_model.py`: Verifica la estructura de datos y la capacidad de entrenamiento.
 *   `test_api.py`: Verifica los códigos de respuesta HTTP (200, 422).
 
-**(Espacio para Imagen: Captura de terminal ejecutando pytest con resultados en verde)**
+**(Captura de terminal ejecutando pytest con resultados en verde)**
 ![alt text](capturas/image.png)
 
 ### 5.2. Pruebas de Integración (Postman)
 Se validaron los endpoints de la API manualmente.
 
-**(Espacio para Imagen: Captura de Postman con la petición POST y la respuesta JSON)**
+**(Captura de Postman con la petición POST y la respuesta JSON)**
 ![alt text](capturas/POSTMAN.png)
 
 ---
@@ -80,11 +80,11 @@ Se validaron los endpoints de la API manualmente.
 ### 6.1. API (Swagger UI)
 La documentación automática generada por FastAPI.
 
-**(Espacio para Imagen: Captura de http://localhost:8000/docs)**
+**(Captura de http://localhost:8000/docs)**
 ![alt text](<capturas/image copy 2.png>)
 
 ### 6.2. Dashboard (Streamlit)
 La interfaz final donde el usuario realiza las predicciones.
 
-**(Espacio para Imagen: Captura del Dashboard con una predicción realizada)**
+**(Captura del Dashboard con una predicción realizada)**
 ![alt text](<capturas/image copy 3.png>)*
